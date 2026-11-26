@@ -1,10 +1,7 @@
-# Haoyuan Li — Personal website, v2
+# Haoyuan Li — Personal website
 
-A static website using the original HTML/CSS/JavaScript structure. Open `index.html` locally or upload the files in this directory to the GitHub Pages repository root. The `assets` directory must remain next to `index.html`.
+Open `index.html` for English or `zh.html` for Chinese. The site runs directly from the folder and on GitHub Pages.
 
-- `index.html`: sections and content
-- `styles.css`: responsive light editorial design
-- `script.js`: publication list, filters, mobile navigation and gallery controls
-- `assets/`: optimised photographs extracted from the supplied CV PDF
+Select an entry marked with a plus sign to open its detail window. Close it with the Close button, Escape or a click on the backdrop.
 
-Content is adapted from the November 2026 CV for public presentation. Internal training material, personal client details, private revenue figures and anonymous-review manuscript links are excluded. Review the selection of photos, publication statuses, and third-party permissions before publishing. External paper links are copied from the supplied CV, not independently verified.
+The two HTML pages contain the overview, with shared styling in `styles.css` and interactions in `script.js`. The matching entries in `details.en.js` and `details.zh.js` contain the extended descriptions. Photographs are in `assets/`.

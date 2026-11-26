@@ -1,13 +1,13 @@
 const papers = [
-{year:2026,status:'published',author:1,venue:'The Web Conference · Short paper',title:'Multi-source Multi-level Multi-token Ethereum Dataset and Benchmark Platform',desc:'3MEthTaskforce connects more than 300 million on-chain transactions, 3,880 token profiles, market data and Reddit discussion in a unified benchmark.',contribution:'First author · Dataset construction, benchmark deployment, experiments and writing',url:'https://arxiv.org/abs/2501.11906'},
-{year:2026,status:'published',author:3,venue:'AAMAS · Best Paper Nominee',title:'R-Debater: Retrieval-Augmented Debate Generation through Argumentative Memory',desc:'Evidence retrieval, role planning and argumentative memory for multi-turn debate generation.',contribution:'Third author · Writing and revision',url:'https://arxiv.org/abs/2512.24684'},
-{year:2026,status:'published',author:2,venue:'EMNLP · Main conference',title:'Value-Rich, Differently Organized: Measuring Value Expression and Organization in AI-Generated Debates',desc:'Examines how AI and human debates express and organise values across discourse levels.',contribution:'Second author · Writing and revision',url:'https://aclanthology.org/2026.emnlp-main.858/'},
-{year:2026,status:'published',author:2,venue:'EMNLP · Main conference',title:'Trait Collapse in Text-to-Image Generation: Evaluating and Mitigating Personality Inconsistency in Visual Storytelling',desc:'Evaluates personality consistency across seven text-to-image systems and introduces a trait–behaviour–visual prompting approach.',contribution:'Second author · Writing and revision',url:'https://aclanthology.org/2026.emnlp-main.362/'},
-{year:2026,status:'preprint',author:2,venue:'arXiv · Public preprint',title:'Can We Believe AI Peer Review?',desc:'Investigates variability and cross-model disagreement in AI peer review, using 200 papers and approximately 14,000 AI reviews.',contribution:'Second author · Writing and revision',url:'https://arxiv.org/abs/2610.19339'},
-{year:2025,status:'published',author:5,venue:'Findings of EMNLP',title:'Boundary Matters: Leveraging Structured Text Plots for Long Text Outline Generation',desc:'Models chapter dependencies using structured plot representations for coherent long-text outline generation.',contribution:'Fifth author · Data preparation and baseline deployment',url:'https://aclanthology.org/2025.findings-emnlp.4/'},
-{year:2025,status:'preprint',author:1,venue:'arXiv · Public preprint',title:'Cognitive Alignment in Personality Reasoning: Leveraging Prototype Theory for MBTI Inference',desc:'Combines cognitive prototype theory, retrieval and language-model reasoning to infer personality types from text.',contribution:'First author · Model design, implementation and writing',url:'https://arxiv.org/abs/2511.00115'},
-{year:2023,status:'published',author:1,venue:'CEI 2023 · Accepted',title:'The Potential of Large Language Models as Tools for Analyzing Student Textual Evaluation: A Differential Analysis Between CS and Non-CS Students',desc:'Compares LLM-based topic and sentiment analysis with human judgments on Coursera student reviews.',contribution:'First author'},
-{year:2022,status:'published',author:1,venue:'Technology Innovation and Application · Journal',title:'高校实验室信息管理系统的开发与设计',desc:'Design and development of a university laboratory information management system, with associated software copyright.',contribution:'First author · Requirements, database design, development, testing and writing'}
+{detail:'paper-eth',year:2026,status:'published',author:1,venue:'The Web Conference · Short paper',title:'Multi-source Multi-level Multi-token Ethereum Dataset and Benchmark Platform',desc:'3MEthTaskforce connects more than 300 million on-chain transactions, 3,880 token profiles, market data and Reddit discussion in a unified benchmark.',contribution:'First author · Dataset construction, benchmark deployment, experiments and writing',url:'https://arxiv.org/abs/2501.11906'},
+{detail:'paper-debate',year:2026,status:'published',author:3,venue:'AAMAS · Best Paper Nominee',title:'R-Debater: Retrieval-Augmented Debate Generation through Argumentative Memory',desc:'Evidence retrieval, role planning and argumentative memory for multi-turn debate generation.',contribution:'Third author · Writing and revision',url:'https://arxiv.org/abs/2512.24684'},
+{detail:'paper-values',year:2026,status:'published',author:2,venue:'EMNLP · Main conference',title:'Value-Rich, Differently Organized: Measuring Value Expression and Organization in AI-Generated Debates',desc:'Examines how AI and human debates express and organise values across discourse levels.',contribution:'Second author · Writing and revision',url:'https://aclanthology.org/2026.emnlp-main.858/'},
+{detail:'paper-trait',year:2026,status:'published',author:2,venue:'EMNLP · Main conference',title:'Trait Collapse in Text-to-Image Generation: Evaluating and Mitigating Personality Inconsistency in Visual Storytelling',desc:'Evaluates personality consistency across seven text-to-image systems and introduces a trait–behaviour–visual prompting approach.',contribution:'Second author · Writing and revision',url:'https://aclanthology.org/2026.emnlp-main.362/'},
+{detail:'paper-review',year:2026,status:'preprint',author:2,venue:'arXiv · Public preprint',title:'Can We Believe AI Peer Review?',desc:'Investigates variability and cross-model disagreement in AI peer review, using 200 papers and approximately 14,000 AI reviews.',contribution:'Second author · Writing and revision',url:'https://arxiv.org/abs/2610.19339'},
+{detail:'paper-outline',year:2025,status:'published',author:5,venue:'Findings of EMNLP',title:'Boundary Matters: Leveraging Structured Text Plots for Long Text Outline Generation',desc:'Models chapter dependencies using structured plot representations for coherent long-text outline generation.',contribution:'Fifth author · Data preparation and baseline deployment',url:'https://aclanthology.org/2025.findings-emnlp.4/'},
+{detail:'paper-proto',year:2025,status:'preprint',author:1,venue:'arXiv · Public preprint',title:'Cognitive Alignment in Personality Reasoning: Leveraging Prototype Theory for MBTI Inference',desc:'Combines cognitive prototype theory, retrieval and language-model reasoning to infer personality types from text.',contribution:'First author · Model design, implementation and writing',url:'https://arxiv.org/abs/2511.00115'},
+{detail:'paper-courses',year:2023,status:'published',author:1,venue:'CEI 2023 · Accepted',title:'The Potential of Large Language Models as Tools for Analyzing Student Textual Evaluation: A Differential Analysis Between CS and Non-CS Students',desc:'Compares LLM-based topic and sentiment analysis with human judgments on Coursera student reviews.',contribution:'First author'},
+{detail:'paper-lab',year:2022,status:'published',author:1,venue:'Technology Innovation and Application · Journal',title:'高校实验室信息管理系统的开发与设计',desc:'Design and development of a university laboratory information management system, with associated software copyright.',contribution:'First author · Requirements, database design, development, testing and writing'}
 ];
 const zh=document.documentElement.lang==='zh-CN';
 const cn=[
@@ -27,7 +27,7 @@ const buttons = [...document.querySelectorAll('.filters button')];
 function renderPapers(filter='all'){
  const shown = papers.filter(p=>filter==='all'||(filter==='first'?p.author===1:p.status===filter));
  count.textContent=zh?`${shown.length} 篇论文`:`${shown.length} ${shown.length===1?'paper':'papers'}`;
- list.innerHTML=shown.map(p=>`<article class="paper"><div class="paper-year">${p.year}</div><div><div class="paper-meta"><span>${p.status==='published'?(zh?'已发表 / 录用':'Published / accepted'):(zh?'预印本':'Preprint')}</span><span>${p.venue}</span></div><h3>${p.url?`<a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.title}</a>`:p.title}</h3><p>${p.desc}</p><p class="contribution">${p.contribution}</p></div>${p.url?`<a class="paper-link" href="${p.url}" target="_blank" rel="noopener noreferrer">${zh?'阅读 ↗':'Read ↗'}</a>`:''}</article>`).join('');
+ list.innerHTML=shown.map(p=>`<article class="paper" data-detail-card="${p.detail}"><div class="paper-year">${p.year}</div><div><div class="paper-meta"><span>${p.status==='published'?(zh?'已发表 / 录用':'Published / accepted'):(zh?'预印本':'Preprint')}</span><span>${p.venue}</span></div><h3><button type="button" class="detail-trigger" aria-haspopup="dialog" aria-controls="entry-dialog" data-detail="${p.detail}">${p.title}<span class="detail-plus" aria-hidden="true">+</span></button></h3><p>${p.desc}</p><p class="contribution">${p.contribution}</p></div>${p.url?`<a class="paper-link" href="${p.url}" target="_blank" rel="noopener noreferrer">${zh?'阅读 ↗':'Read ↗'}</a>`:''}</article>`).join('');
 }
 buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});renderPapers(b.dataset.filter)}));renderPapers();
 const toggle=document.getElementById('menuToggle'),nav=document.getElementById('navLinks');
@@ -36,3 +36,43 @@ toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');tog
 const gallery=document.getElementById('gallery');
 function scrollGallery(dir){const width=gallery.querySelector('figure').getBoundingClientRect().width+14;gallery.scrollBy({left:dir*width,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}
 document.getElementById('galleryPrev').addEventListener('click',()=>scrollGallery(-1));document.getElementById('galleryNext').addEventListener('click',()=>scrollGallery(1));document.getElementById('year').textContent=new Date().getFullYear();
+
+const entryDialog = document.getElementById('entry-dialog');
+const detailTitle = document.getElementById('detail-title');
+const detailSection = document.getElementById('detail-section');
+const detailBody = document.getElementById('detail-body');
+let lastDetailButton;
+
+function openEntry(button) {
+  const entry = detailEntries[button.dataset.detail];
+  const section = button.closest('section')?.querySelector('.section-label');
+  detailSection.textContent = section?.textContent.replace(/^\d+\s*\/\s*/, '') ||
+    (zh ? '工作概览' : 'At a glance');
+  detailTitle.textContent = entry.title;
+  detailBody.replaceChildren(...entry.paragraphs.map(text => {
+    const paragraph = document.createElement('p');
+    paragraph.textContent = text;
+    return paragraph;
+  }));
+  lastDetailButton = button;
+  entryDialog.showModal();
+  entryDialog.scrollTop = 0;
+}
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('button[data-detail]');
+  if (button) {
+    openEntry(button);
+    return;
+  }
+  // Preserve links, text selection and native controls inside a clickable card.
+  if (event.target.closest('a, button, summary, dialog') || window.getSelection()?.toString()) return;
+  const card = event.target.closest('[data-detail-card]');
+  if (card) openEntry(card.querySelector('button[data-detail]'));
+});
+
+document.getElementById('detail-close').addEventListener('click', () => entryDialog.close());
+entryDialog.addEventListener('click', event => {
+  if (event.target === entryDialog) entryDialog.close();
+});
+entryDialog.addEventListener('close', () => lastDetailButton?.focus({preventScroll: true}));
