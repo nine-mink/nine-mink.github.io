@@ -104,3 +104,8 @@ html:has(#entry-dialog[open]) { overflow: hidden; }
 .visit-photos img { height:clamp(235px,30vw,360px); object-fit:contain; background:var(--paper); }
 .visit-photos figcaption { margin-top:6px; color:var(--muted); font-size:13px; }
 .visit-photos a, .business-visit a { cursor:zoom-in; }
+
+.forum-photo { margin:0; align-self:center; }
+.forum-photo a { display:block; cursor:zoom-in; }
+.community-side .forum-photo img { height:auto; min-height:0; }
+.forum-photo figcaption { padding:5px 10px; font-size:12px; color:var(--muted); }
