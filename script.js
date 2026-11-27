@@ -2,7 +2,6 @@ const zh = document.documentElement.lang === 'zh-CN';
 
 // Keep bookmarks from the original one-page site working in both languages.
 const originalSections = {
-  about: 'about', experience: 'about',
   research: 'research', publications: 'research', paperList: 'research', paperCount: 'research',
   projects: 'projects', wellbeing: 'wellbeing',
   community: 'community', 'business-visits': 'community', 'aspiring-leaders-forum': 'community',
@@ -18,6 +17,8 @@ function syncLocation() {
     location.replace(destination.href);
     return;
   }
+  const disclosure = document.getElementById(id);
+  if (disclosure instanceof HTMLDetailsElement) disclosure.open = true;
   const languageSwitch = document.querySelector('.language-switch');
   languageSwitch.hash = document.getElementById(id) ? location.hash : '';
 }
