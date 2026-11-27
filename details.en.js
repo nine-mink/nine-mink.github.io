@@ -123,7 +123,8 @@ const detailEntries = {
     "title": "Using one livestream to prepare for the next",
     "paragraphs": [
       "Coaching ChanCard creators involves preparation before a livestream and reflection afterwards. I turned recurring guidance into material an AI assistant could retrieve and built a chat interface where creators could raise a question or revisit a session.",
-      "I also worked on automated clipping to turn recordings into pieces of content creators could use again. The guidance, review conversations and clips each support a different moment in a creator’s work."
+      "I also worked on automated clipping to turn recordings into pieces of content creators could use again. The guidance, review conversations and clips each support a different moment in a creator’s work.",
+      "In one recording, a viewer asked a broad question. The host answered and the conversation ended. On playback I heard two distinct questions the viewer might have wanted to explore. I updated the review tool to suggest specific follow-ups when a question could naturally be split, and used the rule on later recordings. The host decides whether a suggestion fits the conversation."
     ]
   },
   "swa": {
@@ -157,15 +158,17 @@ const detailEntries = {
   "timeline": {
     "title": "How I began studying psychology",
     "paragraphs": [
-      "As an undergraduate, I studied psychoanalytic ideas with the founder of Time Line and observed guided sessions. I was interested in how a conversation unfolds, which detail someone chooses first and how they find words for a feeling.",
-      "Reflection and relaxation exercises were part of that learning. When I later developed ChanCard, I carried forward an interest in open questions that let a person begin with their own memories and choices."
+      "When I started university, I asked the founder of Time Line if I could work as his assistant. I organised client records and appointments and studied Freud and Winnicott alongside his notes. Later, observing classes and individual sessions, I began to notice which details made him pause and ask another question.",
+      "Reflection and relaxation exercises were part of that learning. When I later developed ChanCard, I carried forward an interest in open questions that let a person begin with their own memories and choices.",
+      "I also made a guided relaxation recording and shared it privately with friends who were under stress."
     ]
   },
   "chancard": {
     "title": "A card as the start of a conversation",
     "paragraphs": [
       "I founded ChanCard in late 2025 to use symbolic cards as prompts for reflection. Two people looking at the same image might notice entirely different details. I am interested in what a particular detail recalls for the person looking at it and why that memory matters now.",
-      "The conversation moves from an image to an experience and then to a present choice. The card gives the person somewhere to begin. The meaning comes from the person telling the story."
+      "The conversation moves from an image to an experience and then to a present choice. The card gives the person somewhere to begin. The meaning comes from the person telling the story.",
+      "When I designed the deck, I left the Master card blank. Someone drawing it gets to answer a question in their own words. What could I do to support myself here?"
     ]
   },
   "philosophy": {
@@ -185,8 +188,8 @@ const detailEntries = {
   "forum": {
     "title": "Discussing AI and local culture in Wellington",
     "paragraphs": [
-      "In 2025 I was nominated to attend the week-long Aspiring Leaders Forum at New Zealand Parliament. I shared my research experience and discussed how generative AI could draw on local culture.",
-      "The topic brings a technical question into familiar territory for an audience from different fields. When people see generated material, which details do they recognise from the place where they live?"
+      "At the 2025 Aspiring Leaders Forum at New Zealand Parliament, I asked for about eight minutes to speak. I shared my research experience and described how our lab used generative AI to make reading materials for Iraqi children that reflected their local culture. Several participants came over afterwards to continue the conversation.",
+      "That week shaped the way I later helped organise Horizon Youth events in Auckland. I wanted participants to have time to stand up and tell the group about something they had done themselves."
     ]
   },
   "workshop": {
@@ -214,7 +217,7 @@ const detailEntries = {
     "title": "Guiding a small group through a research project",
     "paragraphs": [
       "For three annual programmes at Auckland I supervised visiting students, usually three to five per group. We began by narrowing an interest to an experiment that would fit the programme, then chose a technical approach, organised data and interpreted early results.",
-      "Projects I have guided include multi-agent debate and personality inference from social posts. In 2026, the group I supervised won first prize in its programme."
+      "Past projects included multi-agent debate and personality inference from social media. In 2026 I designed a short machine-learning project for visiting students from Southwest University using real UK Biobank data. I planned the experiments and guided the group through model training. The students won first prize in their programme."
     ]
   },
   "marker": {
@@ -227,7 +230,7 @@ const detailEntries = {
   "studio": {
     "title": "Learning to build custom software for clients",
     "paragraphs": [
-      "As an undergraduate I ran a small software studio, delivering custom websites and business systems. One example was a hotel beverage inventory application, designed around the staff’s everyday work of recording a deposit, a withdrawal and the balance left for a guest.",
+      "During my second summer at university, I worked at a hotel front desk. Guests could leave an unfinished bottle for their next visit. We tagged the bottles and kept a paper ledger, and the two were hard to reconcile on a busy shift. I asked the owner if I could build a system and wrote the software myself to record deposits, look up balances and correct entries. I also delivered custom websites and small management systems through my software studio.",
       "Working independently meant discovering requirements, estimating the work and setting a price. These projects taught me to ask which records a requested change would affect and which parts of a workflow I would need to test again."
     ]
   },
@@ -299,6 +302,40 @@ const detailEntries = {
     "paragraphs": [
       "Auckland community events bring together people trying AI for the first time and people already building products. My topics have included how models work, getting started with ChatGPT and Codex, and questions about ethics and marketing.",
       "At the youth leadership forum in Wellington I shared my research experience and discussed how generative AI relates to local culture. The work people already do gives each audience a different route into the conversation."
+    ]
+  },
+  "fact": {
+    "title": "Combining ECG images and clinical records",
+    "paragraphs": [
+      "I cleaned the data, designed and implemented the two-stage fusion architecture, and contributed to writing and revision. We combined a transformer for clinical features with an ECG image model, then evaluated disease detection, future risk and outcomes after diagnosis.",
+      "The UK Biobank ECG image subset included about 64,448 participants, and the clinical data covered 133 features. We split the data by patient and used a cohort in Chengdu for external validation. We submitted this work to AISI 2027 / AAAI-27."
+    ]
+  },
+  "ccdd": {
+    "title": "Evaluating Chinese debate against professional adjudication",
+    "paragraphs": [
+      "CCDD links 20,542 speaking turns across 148 debates to 2,690 scoring instances, along with adjudicators’ comments and results. We tested whether models could predict the winner, score individual stages and identify the best speaker.",
+      "As second author, I contributed to writing and revision. We submitted the work to ICLR 2027 and revised the manuscript in November 2026."
+    ]
+  },
+  "canon": {
+    "title": "Does a continuation respect the world of a novel?",
+    "paragraphs": [
+      "As fourth author, I helped design the dataset structure. We represented a novel’s characters, places, rules and other elements as individual claims that a reader could check against the text.",
+      "We compared seven models and three generation strategies. Structured generation helped continuations include more of the original setting, while its effect on contradictions varied. We submitted the manuscript to ARR in October 2026."
+    ]
+  },
+  "ecg-review": {
+    "title": "Reviewing the evidence for AI in ECG interpretation",
+    "paragraphs": [
+      "As a co-author, I prepared and cleaned data for a systematic review and meta-analysis of AI-based ECG diagnosis and disease prediction. We submitted the manuscript to Clinical Research in Cardiology on 12 November 2026."
+    ]
+  },
+  "business-visit": {
+    "title": "Meeting Sir Richard Taylor",
+    "paragraphs": [
+      "At the request of Li (路易李), founder of a New Zealand business group, I hosted Sun Hengqin, chairman of Oriental Movie Metropolis. I accompanied Sun and the group founder to separate meetings with Sir Richard Taylor. An official WeChat report featured a photograph of Sun, Sir Richard and me.",
+      "Sir Richard and I also spoke when he visited Liaocheng in Shandong, China. In all, we met about four or five times."
     ]
   }
 };
