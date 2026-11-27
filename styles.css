@@ -95,8 +95,8 @@ html:has(#entry-dialog[open]) { overflow: hidden; }
 .academy-photo { width:min(100%, 26rem); margin:16px 0 0; }
 .academy-photo img { border-radius:2px; }
 .academy-photo figcaption { margin-top:6px; font-size:13px; color:var(--muted); }
-.gallery #nz-community img { object-fit:contain; background:var(--wash); }
-.academy-photo a, #nz-community a { display:block; cursor:zoom-in; }
+.gallery #nz-community img, .gallery #ai-teaching img { object-fit:contain; background:var(--wash); }
+.academy-photo a, #nz-community a, #ai-teaching a { display:block; cursor:zoom-in; }
 
 .visit-photos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:20px; margin-top:24px; }
 .visit-photos figure { margin:0; max-width:100%; }
