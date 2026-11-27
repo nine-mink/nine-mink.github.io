@@ -91,3 +91,9 @@ html:has(#entry-dialog[open]) { overflow: hidden; }
 .talk-list h4 { margin:7px 0; }
 .talk-list p { font-size:14px; line-height:1.7; }
 @media(max-width:760px) { .talk-list { grid-template-columns:1fr; gap:0; } }
+
+.academy-photo { width:min(100%, 26rem); margin:16px 0 0; }
+.academy-photo img { border-radius:2px; }
+.academy-photo figcaption { margin-top:6px; font-size:13px; color:var(--muted); }
+.gallery #nz-community img { object-fit:contain; background:var(--wash); }
+.academy-photo a, #nz-community a { display:block; cursor:zoom-in; }
