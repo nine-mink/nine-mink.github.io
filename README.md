@@ -2,6 +2,6 @@
 
 Open `index.html` for English or `zh.html` for Chinese. The site runs directly from the folder and on GitHub Pages.
 
-Select an entry marked with a plus sign to open its detail window. Close it with the Close button, Escape or a click on the backdrop.
+The home pages introduce four areas of work and three featured cases. The subject pages are `research.html`, `projects.html`, `community.html` and `wellbeing.html`. Education and professional experience are in `about.html`. Each has a Chinese counterpart ending in `-zh.html`. Earlier home-page bookmarks redirect to the corresponding section.
 
-The two HTML pages contain the overview, with shared styling in `styles.css` and interactions in `script.js`. The matching entries in `details.en.js` and `details.zh.js` contain the extended descriptions. Photographs are in `assets/`.
+Shared styling is in `styles.css`. Navigation, galleries and detail windows use `script.js`. Select an entry marked with a plus sign to open its detail window. Close it with the Close button, Escape or a click on the backdrop. The matching entries in `details.en.js` and `details.zh.js` contain the extended descriptions. The publication list and filters are in `publications.js`. Photographs are in `assets/`.
